@@ -172,22 +172,20 @@ $('.toOrder').click((e)=>{
              $.get('data/cart/checkedDish.php').then(
                 data=>{
                    for(var i in data){
-                var did=data[i].did,count=data[i].count,sid=data[i].sid;
-                console.log('did'+did+',count'+count+',oid'+oid)
-                $.post('data/order/addOrderDetail.php',`order_id=${oid}&did=${did}&count=${count}`).then(data=>{
-                    //加入订单的同时删除购物车
-                    console.log('订单详情'+data);
-                          $.post('data/cart/deleteOne.php',`sid=${sid}`).then()}
-                    );
-             };
+            //将已选的菜单信息添加到订单详情
+                    var did=data[i].did,count=data[i].num,sid=data[i].sid;
+                   // console.log('did'+did+',count'+count+',oid'+oid)
+                    $.post('data/order/addOrderDetail.php',`order_id=${oid}&did=${did}&count=${count}`).then();
+                       //加入订单的同时删除购物车
+                    //   console.log('sid:'+sid);
+                       console.log(oid);
+                       $.post('data/cart/deleteOne.php',`sid=${sid}`).then(data=>{});
+                    };
+                   console.log(1);
+                    location.href='orderConfirm.html?oid='+oid;
                 })
-             //将已选的菜单信息添加到订单详情中
-         
-  
 
 
-
-             // location.href='orderConfirm.html?oid='+oid;
         });
        
     

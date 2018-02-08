@@ -25,10 +25,11 @@ $(()=>{
     cxt.fill();
     cxt.closePath();
 //预订信息
-var oid=location.search.substr(5);   
+var oid=location.search.substr(5);
+
 $.get("data/order/getOrder.php",`oid=${oid}`)
         .then(data=>{
-           console.log(data);
+          // console.log(data);
            var html='';
              html+=`<li>人数： <span>${data[0].pNum}</span></li>
                     <li>时间： <span>${data[0].timer}</span></li>
@@ -36,7 +37,23 @@ $.get("data/order/getOrder.php",`oid=${oid}`)
                     <li>联系电话： <span>${data[0].phone}</span></li>`;
             $('.contact_confirm>.contact_info').html(html);
         });
-   
+$.get("data/order/getOrderDetail.php",`oid=${oid}`).then(data=>{
+    console.log(data);
+    var html='';
+    html+=`
+    <ul class="item_content">
+                    <li class="p_info"> 
+                    <b><img src=""></b>
+
+                <b class="product_name ">
+                
+                </b>
+                </li>
+                    <li class="p_price">单价(元)</li>
+                    <li class="p_count">数量</li>
+                    <li class="p_tPrice">金额</li>
+                </ul>`;
+})
 
 
 })
