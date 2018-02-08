@@ -1,0 +1,142 @@
+#header_list {
+    height: 70px;
+    background-color: #A51C21;
+    line-height: 70px;
+    /*display:flex;*/
+    /*justify-content:space-between;*/
+    box-sizing: border-box;
+    color: #fff;
+}
+
+#tList {
+    width: 650px;
+    font-weight: bold;
+}
+
+#tList {
+    float: left;
+}
+
+#tList li {
+    float: left;
+}
+
+#cList {
+    width: 350px;
+    float: right;
+}
+
+#cList ul.log-bef {
+    margin-left: 80px;
+}
+
+#cList li {
+    float: left;
+    overflow: hidden;
+}
+
+#cList li:nth-child(2) {
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+#tList li {
+    position: relative;
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+#tList li:after {
+    content: " ";
+    z-index: 100;
+    position: absolute;
+    width: 0;
+    left: 50%;
+    right: 50%;
+    background-color: #9cd5c4;
+    height: 6px;
+    bottom: 2.5px;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+    transform: translate(-50%);
+}
+
+#tList li:hover:after {
+    width: 80px;
+}
+
+#tList li a, #cList li a, #cList li span {
+    color: #FFFEFE;
+}
+
+#tList li a {
+    font-size: 16px;
+}
+#tList li a.active{
+    color:#9CD5C4;
+    fontWeight:"bold";
+    fontSize:16;
+    text-shadow:2px 3px 2px #aaa;
+}
+#cList span.fa {
+    color: #9cd5c4;
+    margin-right: 5px
+}
+
+/*登录*/
+#login-all > .login {
+    font-weight: bold;
+    color: #A51C21;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#login-all > .login p:first-child {
+    text-align: right;
+    padding-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#login-all > .login p:nth-child(3) {
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#login-all > .login p input {
+    height: 30px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+}
+
+#login-all > .login p:last-child input {
+    background-color: #A51C21;
+    color: #fff;
+    border-radius: 5px;
+    width: 40px;
+}
+
+#login-all > .login > p.msg {
+    background: lightYellow;
+    color: red;
+    display: none
+}
+
+/*购物车*/
+.log-aft .badge {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #9CCFBE;
+    line-height: 15px;
+    border-radius: 15px;
+    position: absolute;
+    top: 24px;
+    color: #fff;
+}
+
+

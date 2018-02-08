@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale =1.0,maximum-scale=1.0,user-scalable=no">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet"  href="font-awesome-4.7.0/css/font-awesome.css" >
+    <link rel="stylesheet" href="css/footer.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="css/shopping_cart.css">
+</head>
+<body>
+    <div class="main">
+        <div id="header"></div>
+        <div class="cart-container">
+            <div class="book">
+                <div class="title">
+                  <h1><span class="fa fa-bookmark-o "></span>预定信息</h1>
+                </div>
+                <div class="book-infor">
+                    <div class="book-left"></div>
+                    <div class="book-right ">
+                        <canvas id="canvas-bg" width="400px" height="390px"></canvas>
+                        <div class="form-right">
+                                <label >用餐人数</label>
+                            <datalist id="number">
+                                <option value="1位"></option>
+                                <option value="2位"></option>
+                                <option value="3位"></option>
+                                <option value="4位"></option>
+                                <option value="5位"></option>
+                                <option value="6位"></option>
+                                <option value="更多"></option>
+                            </datalist>
+                            <input required type="text" placeholder=" 请选择人数" list="number" class="pNum">
+                                <!--<select  name="pNum" >-->
+                                    <!--<option value="0">请选择人数</option>-->
+                                    <!--<option value="1">1位</option>-->
+                                    <!--<option value="2">2位</option>-->
+                                    <!--<option value="3">3位</option>-->
+                                    <!--<option value="4">4位</option>-->
+                                    <!--<option value="5">5位</option>-->
+                                    <!--<option value="6">6位</option>-->
+                                    <!--<option value="7">more</option>-->
+                                <!--</select>-->
+                                <label for="datetimerpicker">用餐时间</label>
+                                <input required  name='timer'type="text" id="datetimerpicker" placeholder=" 请选择时间">
+                            <label for=>联系人</label>
+                            <input required  name='con_name' class='con_name'type="text" placeholder=" 请输入联系人">
+                                <label for=>联系方式</label>
+                                <input required  name='phone' type="tel" class="tel" placeholder=" 请输入电话">
+                            <!--<button class="book_btn">预订位置</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--2、购物车主体-->
+            <div class="shopping-cart">
+                <!--2.1 标题行-->
+                <div class="title">
+                    <h1><span class="fa fa-shopping-cart "></span>已选菜单</h1>
+                    <p>
+                        已选
+                        <span class="total color">0</span>
+                        件商品
+                        <span>合计(不计运费)</span>
+                        <span class="totalPrices color sum">0.00</span>
+                        <span class="unit color">元</span>
+                    </p>
+                </div>
+                <!--2.2 内容块-->
+                <div class="sc_box">
+                    <!--2.2.1 内容-->
+                    <div class="sc_content">
+
+
+                        <div class="imfor-top">
+                            <div class="check-top">
+                                <img src="images/cart/product_normal.png" alt="">
+                                全选
+                            </div>
+                            <div class="product-top">商品</div>
+                            <div class="price-top">单价(元)</div>
+                            <div class="num-top">数量</div>
+                            <div class="total-top">金额</div>
+                            <div class="del-top">操作</div>
+                        </div>
+                        <div class="sc-content-body">
+                            <!--1、商品1-->
+                            <!--<div class="imfor">-->
+                                <!--<div class="check">-->
+                                    <!--<img src="images/cart/product_normal.png" alt="">-->
+                                <!--</div>-->
+                                <!--<div class="product">-->
+                                    <!--<a href="#">-->
+                                        <!--<img src="images/menu/p_10.jpg" alt="">-->
+                                    <!--</a>-->
+                                    <!--<span class="dish_name">-->
+                  <!--<a href="#">挪威香烤三文鱼&amp;烤虎虾</a>-->
+                <!--</span>-->
+                                    <!--<p ><span>份量：</span><span class="weight">100g</span>/份</p>-->
+                                <!--</div>-->
+                                <!--<div class="price">-->
+                                        <!--<b>￥</b>200.00-->
+                                <!--</div>-->
+                                <!--<div class="num">-->
+                                    <!--<span class="reduce">&nbsp;-&nbsp;</span>-->
+                                    <!--<input type="text" value="1">-->
+                                    <!--<span class="add">&nbsp;+&nbsp;</span>-->
+                                <!--</div>-->
+                                <!--<div class="total-price">-->
+                                    <!--<span>￥</span>-->
+                                    <!--<span>220</span>-->
+                                <!--</div>-->
+                                <!--<div class="del">-->
+                                    <!--<a href="#">删除</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <!--2.2.2 计算-->
+                    <div class="foot">
+                        <div class="base">
+                            <!--<div class="all">-->
+                                      <!--<span>-->
+                                        <!--<img src="images/cart/product_normal.png" alt="">-->
+                                      <!--</span>-->
+                                                        <!--全选-->
+                            <!--</div>-->
+                            <a href="#">删除</a>
+                            <!--<div class="foot-qk">清空失效产品</div>-->
+                        </div>
+                        <div class="go-price">
+                            <div class="foot-selected">已选<span class="totalOne color">0</span>件商品</div>
+                            <div class="foot-tol">
+                                <span>合：计(不含运费)</span>
+                                <span class="foot-price">0.00</span>
+                                <span class="foot-desc">元</span>
+                            </div>
+                            <button class="toOrder">去预定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+
+
+
+
+
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery-ui-timepicker-addon.js"></script>
+ <script src="js/jquery-ui-timepicker-zh-CN.js"></script>
+<script src="js/header.js"></script>
+<script src="js/shopping_cart.js"></script>
+<script src="js/commonFunctions.js"></script>
+</body>
+</html>

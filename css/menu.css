@@ -1,0 +1,323 @@
+
+/*shake拼接图*/
+    div.broad{
+        margin:10px 0px 10px;
+        width: 1000px;
+        height: 158px;
+        position:relative;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    div.broad>div{
+        height: 158px;
+        width: 50px;
+        position:absolute;
+        top:0;
+        background-image:url(../images/menu/broad.png)
+    }
+    div.broad>div:nth-child(2){
+        left:0px;
+        background-position:0px 0px;
+    }
+    div.broad>div:nth-child(3){
+        left:50px;
+        background-position:-50px 0px;
+    }
+    div.broad>div:nth-child(4){
+        left:100px;
+        background-position:-100px 0px;
+    }
+    div.broad>div:nth-child(5){
+        left:150px;
+        background-position:-150px 0px;
+    }
+    div.broad>div:nth-child(6){
+        left:200px;
+        background-position:-200px 0px;
+    }
+    div.broad>div:nth-child(7){
+        left:250px;
+        background-position:-250px 0px;
+    }
+    div.broad>div:nth-child(8){
+        left:300px;
+        background-position:-300px 0px;
+    }
+    div.broad>div:nth-child(9){
+        left:350px;
+        background-position:-350px 0px;
+    }
+    div.broad>div:nth-child(10){
+        left:400px;
+        background-position:-400px 0px;
+    }
+    div.broad>div:nth-child(11){
+        left:450px;
+        background-position:-450px 0px;
+    }
+    div.broad>div:nth-child(12){
+        left:500px;
+        background-position:-500px 0px;
+    }
+    div.broad>div:nth-child(13){
+        left:550px;
+        background-position:-550px 0px;
+    }
+    div.broad>div:nth-child(14){
+        left:600px;
+        background-position:-600px 0px;
+    }
+    div.broad>div:nth-child(15){
+        left:650px;
+        background-position:-650px 0px;
+    }
+    div.broad>div:nth-child(16){
+        left:700px;
+        background-position:-700px 0px;
+    }
+    div.broad>div:nth-child(17){
+        left:750px;
+        background-position:-750px 0px;
+    }
+    div.broad>div:nth-child(18){
+        left:800px;
+        background-position:-800px 0px;
+    }
+    div.broad>div:nth-child(19){
+        left:850px;
+        background-position:-850px 0px;
+    }
+    div.broad>div:nth-child(20){
+        left:900px;
+        background-position:-900px 0px;
+    }
+    div.broad>div:nth-child(21){
+        left:950px;
+        background-position:-950px 0px;
+    }
+    @keyframes shake{
+        0%{top:0px}
+        20%{top:30px}
+        40%{top:-20px}
+        65%{top:20px}
+        80%{top:10px}
+        90%{top:5px}
+        100%{top:0px}
+    }
+    .shake{
+        animation:shake 0.5s ease-in-out;
+    }
+    div.broad>div:hover{
+         transform:scale(1.2);
+     }
+
+
+/*菜单主体部分*/
+    div.menu_main>ul.menu_title{
+       width: 1000px;
+        display:flex;
+       justify-content: space-around;
+
+    }
+div.menu_main>ul.menu_title>li{
+    width: 100px;
+    height:80px;
+    box-sizing: border-box;
+    /*margin-bottom:50px*/
+}
+    div.menu_main>ul.menu_title>li>a{
+        display: block;
+        width: 100px;
+        height:60px;
+        font-size: 15px;
+        color:#737373;
+        padding-top:60px;
+    }
+    div.menu_main>ul.menu_title>li:first-child>a{
+         background: url("../images/menu/fl_01.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li:nth-child(2)>a{
+         background: url("../images/menu/fl_02.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li:nth-child(3)>a{
+        background: url("../images/menu/fl_03.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li:nth-child(4)>a{
+        background: url("../images/menu/fl_04.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li:nth-child(5)>a{
+        background: url("../images/menu/fl_05.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li:nth-child(6)>a{
+        background: url("../images/menu/fl_06.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li:nth-child(7)>a{
+        background: url("../images/menu/fl_07.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li:nth-child(8)>a{
+        background: url("../images/menu/fl_08.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li:nth-child(9)>a{
+        background: url("../images/menu/fl_09.jpg") no-repeat center top;
+        transition:all 0.1s linear;
+    }
+    div.menu_main>ul.menu_title>li>a.change_img{
+        background: url("../images/menu/fl_10.jpg") no-repeat center top;
+        background-size: 100% 100%;
+        padding-top:25px;
+        font-weight: bold;
+        color:#fff;
+    }
+/* <!--分类显示-->*/
+div.menu_main>ul.menu{
+    margin-top: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div.menu_main>ul.menu>li{
+    width: 485px;
+    margin-bottom:20px;
+    position: relative;
+}
+div.menu_main>ul.menu>li>.menu_pic>a{
+    display: block;
+    width: 485px;
+    overflow: hidden;
+}
+div.menu_main>ul.menu>li>.menu_pic>a>img{
+    width: 485px;
+transition:all 0.3s linear;
+}
+div.menu_main>ul.menu>li>.menu_pic>span.fa {
+    display:inline-block;
+    color:#666;
+    position:absolute;
+    bottom:0px;
+    z-index: 2;
+    font-weight:bold;
+    font-size:20px;
+    width: 485px ;
+    height:25px;
+    line-height: 25px;
+    background:rgba(255,255,255,0.5) ;
+    margin-left:-242.5px;
+
+}
+div.menu_main>ul.menu>li>.menu_pic>span.fa:hover{
+    color:#A51C21;
+}
+div.menu_main>ul.menu>li>.menu_pic>a>img:hover{
+    transform:scale(1.1);
+}
+/*购物车等详细信息*/
+div.menu_main>ul.menu>li>div.menu_detail{
+    width: 485px;
+    height:50px;
+   line-height: 50px;
+    color:#000;
+    background:rgba(255,255,255,0.7) ;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    font-size:15px;
+    visibility: hidden;
+}
+
+div.menu_main>ul.menu>li>div.menu_detail .price{
+    display: inline-block;
+    margin:0px 10px 0px;
+    color:#A51C21;
+    font-weight:bold;
+    vertical-align:middle;
+}
+div.menu_main>ul.menu>li>div.menu_detail .dish_name{
+    color:#737373;
+    vertical-align: top;
+}
+div.menu_main>ul.menu>li>div.menu_detail input{
+    width: 30px;
+    height:25px;
+    text-align:center;
+    border-radius: 2px  ;
+    box-sizing: border-box;
+    vertical-align:middle;
+}
+div.menu_main>ul.menu>li>div.menu_detail span.add,div.menu_main>ul.menu>li>div.menu_detail span.reduce{
+    display:inline-block;
+    width: 25px;
+    height:25px;
+    line-height:25px;
+    border-radius: 3px  ;
+    text-align:center;
+    box-sizing: border-box;
+   background-image:linear-gradient(to top,#bbb,#eee );
+    color:#fff;
+    font-size:25px;
+    font-weight:bolder;
+    vertical-align:middle;
+    cursor:pointer;
+}
+/*购物车的隐藏框*/
+div.menu_main>ul.menu>li>div.menu_detail span.cal:hover{
+    background: #bbb;
+}
+div.menu_main>ul.menu>li>div.menu_detail button:last-child{
+    height:25px;
+    width: 100px;
+    margin-left:10px;
+    color:#fff;
+    border-radius: 5px  ;
+    background:#A51C21;
+    font-weight:bold;
+}
+div.menu_main>ul.menu>li>div.menu_detail button:last-child:hover{
+    color:#666666;
+}
+div.menu_main>div.pages_list>ul.pages{
+    width:150px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: space-between;
+}
+div.menu_main>div.pages_list>ul.pages>li>a{
+      display:inline-block;
+      border:1px solid #bbb;
+      padding:5px 10px;
+      border-radius: 5px;
+      font-size:14px;
+  }
+div.menu_main>div.pages_list>ul.pages>li{
+    display:inline-block;
+    border:1px solid #fff;
+    font-size:10px;
+    border-radius: 8px;
+}
+div.menu_main>div.pages_list>ul.pages>li.active{
+    background-color:#013D21;
+}
+div.menu_main>div.pages_list>ul.pages>li>a:hover {
+    background-color: #A51C21;
+    color:#fff;
+    border-color:#A51C21;
+}
+div.menu_main>div.pages_list{
+    display:flex;
+    margin:5px auto;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+}
+div.menu_main>div.pages_list>.form-group{
+    font-size:15px;
+    height:30px;
+    line-height: 30px;
+}

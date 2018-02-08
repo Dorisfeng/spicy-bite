@@ -1,0 +1,319 @@
+.shopping-cart{
+    margin:20px auto 20px;
+}
+.shopping-cart>div.title .fa{
+    margin-right: 20px;
+   font-size:30px;
+    color: #7F0000;
+
+}
+.shopping-cart>div.title>h1{
+    font-family: "微软雅黑";
+    margin-left:20px;
+    font-style:italic;
+   text-shadow: 0 0 8px #666;
+}
+/*.shopping-cart>div.title p{*/
+    /*margin:30px 10px ;*/
+ /*}*/
+.shopping-cart>div.title{
+    display:flex;
+    justify-content:space-between;
+}
+.shopping-cart .total{
+    font-size:14px;
+    padding:0 3px;
+    font-weight:bold;
+}
+div.title .color{
+    color:#A51C21;
+}
+.shopping-cart .totalPrices{
+    padding-left:8px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.sc_content>div.imfor-top{
+    height:36px;
+    line-height:36px;
+    background:linear-gradient(to bottom,#f5f4f5,#e6e6e5);
+    box-shadow:3px 3px 6px #ccc;
+    margin:10px auto;
+    display:flex;
+    text-align:center;
+    color:#333;
+    font-size:14px;
+}
+.sc_content div.check-top{
+    width:70px;
+}
+.sc_content div.product-top{
+    width:400px;
+}
+.sc_content div.price-top{
+    width:140px;
+}
+.sc_content div.num-top{
+    width:140px;
+}
+.sc_content div.total-top{
+    width:120px;
+}
+.sc_content div.del-top{
+    width:130px;
+}
+.sc_content div.imfor{
+    height:115px;
+    background:#fff;
+    border:1px solid #ddd;
+    display:flex;
+    position:relative;
+    font-size:14px;
+
+}
+.sc_content div.check{
+    width:70px;
+}
+.sc_content div.check img{
+    position:absolute;
+    top:49px;
+    left:27px;
+}
+.sc_content div.product{
+    width:400px;
+
+}
+.sc_content div.product>a{
+    float:left;
+    margin:7.5px 40px;
+
+}
+.sc_content div.product>a>img{
+    width:100px;
+    height:100px;
+}
+.sc_content div.product>.dish_name{
+    display: block;
+    margin-top:40px;
+}
+.sc_content div.product>p{
+
+    margin-top:10px;
+}
+.sc_content .price{
+    line-height: 115px;
+}
+.sc_content div.product~div{
+    box-sizing:border-box;
+    border-left:1px solid #ddd;
+}
+.sc_content div.price{
+    text-align:center;
+      width:140px;
+    font-weight:bold;
+    color:#00a1ed;
+    box-sizing:border-box;
+}
+.sc_content div.num{
+    width:140px;
+    line-height: 115px;
+}
+.sc_content div.num span{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    line-height:24px;
+    font-size:16px;
+    border:1px solid #bbb;
+    background:#e8e8e8;
+    text-align:center;
+    margin-top:43px;
+    color:#444;
+    float:left;
+    cursor:pointer;
+}
+.sc_content div.num span:hover{
+    background:#ccc;
+}
+.sc_content div.num span.reduce{
+    margin-left:32px;
+}
+.sc_content div.num input{
+    width:24px;
+    height:22px;
+    text-align: center;
+    font:12px simhei;
+    border:1px solid #bbb;
+    border-left:none;
+    border-right:none;
+    float:left;
+    margin-top:43px;
+}
+.sc_content div.total-price{
+    text-align:center;
+    line-height:115px;
+    width:120px;
+    font-weight: bold;
+}
+.sc_content div.del{
+    width:130px;
+    text-align:center;
+    line-height:115px;
+}
+.sc_box div.foot{
+    margin-top:30px;
+    height:42px;
+    line-height:42px;
+    background:linear-gradient(to bottom,#f5f4f5,#e6e6e5);
+    display:flex;
+    justify-content:space-between;
+}
+.sc_box div.foot>div{
+    display:flex;
+}
+.sc_box div.foot div.base a{
+    margin-left:30px;
+    font-size: 14px;
+}
+.sc_box div.foot div.foot-qk{
+    height:23px;
+    line-height:23px;
+    width:84px;
+    text-align:center;
+    background:#ccc;
+    color:#fff;
+    margin-left:15px;
+    cursor:pointer;
+    align-self:center;
+}
+.sc_box div.foot div.foot-selected{
+    margin-right:15px;
+}
+.sc_box div.foot span.totalOne{
+    font-size:14px;
+    font-weight:bold;
+    margin:0 5px;
+}
+.sc_box div.foot-tol{
+    margin-right:15px;
+}
+.sc_box div.foot-tol span+span{
+    color: #A51C21;
+    font-size:16px;
+    font-weight:bold;
+}
+.sc_box .toOrder{
+    cursor:pointer;
+    width:140px;
+    height:42px;
+    line-height:42px;
+    background:linear-gradient(to bottom,#A51C21,#7F0000);
+    text-align:center;
+    font-size:18px;
+    color:#fff;
+    border-radius:2px;
+}
+.sc_box  .toOrder:hover{
+    background:#7F0000;
+}
+/*//预定信息*/
+/*div.book{*/
+    /*color:#666;*/
+/*}*/
+div.book h1 span{
+    display: inline-block;
+    font-size:30px;
+    color: #7F0000;
+    margin-right:20px;
+}
+div.book h1 {
+    padding:20px;
+    color:#666;
+    font-size:25px;
+    font-family: "微软雅黑";
+    font-style:italic;
+    text-shadow: 0 0 8px #666;
+    text-align:start;
+}
+div.book-infor{
+    /*margin-top: -10px;*/
+    width:1000px;
+    height:400px;
+    background-color: #A51C21;
+
+}
+div.book-infor:before{
+    content:'';
+    display: table;
+}
+
+div.book-infor div.book-left{
+    float:left;
+    background:url('../images/cart/reserve.jpg') ;
+    background-size: cover;
+    width:200px;
+    height:250px;
+    border:10px ridge #fff;
+    margin-left:150px;
+    margin-top: 10px;
+
+}
+
+.form-right{
+    float:right;
+    margin-right: 270px;
+    height:300px;
+    padding-top:80px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.form-right label,.form-right input,.form-right select{
+    font-size: 14px;
+    text-align: left;
+    color:#757575;
+    font-weight: bold;
+    line-height: 40px;
+    height:30px;
+    width:300px;
+}
+.form-right label{
+    color:#fff;
+}
+.form-right .book_btn{
+    margin-top:20px;
+    width:300px;
+    height:30px;
+   border-radius: 5px;
+    transition: all .1s linear;
+    font-weight: bold;
+    color:#757575;
+}
+.form-right .book_btn:hover{
+    background-color: #9ECCBC;
+    color:#fff;
+
+}
+.book-right{
+    height:400px;
+    width:500px;
+   position: relative;
+    margin-left: 370px;
+}
+#canvas-bg{
+    position: absolute;
+    left:0px;
+    top:10px;
+}
+.ui-timepicker-div .ui_tpicker_time_input{
+    width:40px;
+}
+.ui-timepicker-div dl dt,.ui-timepicker-div dl dd{
+    display: inline-block;
+}

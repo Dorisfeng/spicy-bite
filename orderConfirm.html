@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale =1.0,maximum-scale=1.0,user-scalable=no">
+    <title>订单确认</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet"  href="font-awesome-4.7.0/css/font-awesome.css" >
+    <link rel="stylesheet" href="css/footer.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="css/orderConfirm.css">
+</head>
+<body>
+<div class="main">
+    <div id="header"></div>
+    <div id="navlist">
+        <ul>
+            <li class="navlist_blue_left"></li>
+            <li class="navlist_blue">确认订单信息</li>
+            <li class="navlist_blue_arro"><canvas id="canvas_blue" width="20" height="38"></canvas>
+            </li>
+            <li class="navlist_gray">支付订金<b></b></li>
+            <li class="navlist_gray_arro"><canvas id="canvas_gray" width="20" height="38"></canvas>
+            </li>
+            <li class="navlist_gray">支付完成<b></b></li>
+            <li class="navlist_gray_right"></li>
+        </ul>
+    </div>
+    <div id="container" class="clear">
+        <!--收货地址-->
+        <div class="adress_choice">
+            <label>请选择就餐地址：</label>
+            <datalist id="myList">
+                <option>东方广场店-北京东城区东长安街1号</option>
+                <option>天津大悦城店-天津市南开区南门外大街2号</option>
+            </datalist>
+            <input type="text"  list="myList" class="user_address" placeholder="请输入店名或地址查询">
+        </div>
+
+        <!--联系人信息-->
+
+        <!-- 商品信息-->
+        <form action="">
+            <div class="contact_confirm">
+                <p>确认订餐信息</p>
+                <ul class="contact_info">
+                   <!--  <li>人数： <span>3</span></li>
+                    <li>时间： <span>2018-02-01 04:15</span></li>
+                    <li>联系人： <span>啦啦啦</span></li>
+                    <li>联系电话： <span>188888888</span></li> -->
+                </ul>
+
+            </div>
+            <div class="product_confirm">
+                <p>确认商品信息</p>
+                <ul class="item_title">
+                    <li class="p_info">商品信息</li>
+                    <li class="p_price">单价(元)</li>
+                    <li class="p_count">数量</li>
+                    <li class="p_tPrice">金额</li>
+                </ul>
+                <div id="product_list">
+                </div>
+            </div>
+        </form>
+        <!-- 结算条-->
+        <div id="count_bar">
+            <span class="go_cart"><a href="shopping_cart.html">&lt;&lt;返回购物车</a></span>
+            <span class="count_bar_info">已选<b id="count">0</b>件商品&nbsp;&nbsp;合计(不含运费):<b class="zj">0.00</b> <input type="hidden" name="Payment" value="">元</span>
+            <button class="go_pay">确认并付款</button> 
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="footer"></div>
+</div>
+
+
+
+
+<script src="js/ajax.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/header.js"></script>
+<script src="js/orderConfirm.js"></script>
+</body>
+</html>

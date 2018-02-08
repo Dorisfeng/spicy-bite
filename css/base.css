@@ -1,0 +1,29 @@
+body{
+	color:#666;
+	font:12px 'simhei',Arial,helvetica,sans-serif;
+	margin:0;
+	padding:0;
+	
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+img{vertical-align:middle;}
+a{text-decoration:none;color:#000;}
+a:hover{color:#0aa1ed}
+.clear:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+*{
+	/*font-family: 微软雅黑 ;*/
+}
+.lf{float:left;}                                                                                                                                           
+.rt{float:right;}
+div.main{width: 1000px;margin:0 auto;text-align:center}
+/*#header{width: 100%;height:80px;}*!*/
+#footer{clear:both}
+button,input{outline:none;border:none}

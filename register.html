@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet"   href="font-awesome-4.7.0/css/font-awesome.css" >
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div class="main">
+    <div id="header"></div>
+    <div class="register">
+
+        <img src="images/index/logo.png" alt="">
+        <h1>spicy bite</h1>
+        <form class="register_form">
+            <!-- <video class='video' src="video/birds.mp4" autoplay loop>
+                您的浏览器不支持此视频的播放，请升级！
+            </video> -->
+            <h2>用户注册</h2>
+            <p>
+                <label>
+
+                        <span class="fa fa-user-circle"></span>
+                        <input  name="uname" placeholder="请输入用户名" autofocus>
+
+               </label>
+                <!--(必填，2个以上字符)-->
+            </p>
+            <p>
+                <label>
+
+                        <span class="fa fa-unlock-alt"></span>
+                        <input  name="upwd1" type="password" placeholder="请输入密码">
+
+                </label>
+                <!--</label>(必填，6~8位数字)-->
+            </p>
+            <p>
+                <label>
+
+                        <span  class="fa fa-unlock-alt" ></span>
+                        <input name="upwd2" type="password" placeholder="请确认密码">
+
+                </label>
+                <!--(必填，必须和密码保持一致)-->
+            </p>
+            <p>
+                <label>
+
+                       <span  class="fa fa-envelope" ></span>
+                        <input name="email" placeholder="请输入邮箱">
+
+                </label>
+                <!--(必填，但必须符合电子邮件)-->
+            </p>
+            <p>
+                <label>
+
+                    <span  class="fa fa-phone"></span>
+                    <input  name="mobile" placeholder="请输入手机号码">
+
+                </label>
+                <!--(选填，但必须符合中国手机号格式)-->
+            </p>
+            <!--验证码-->
+            <p class="vali_code">
+                <label>
+                    <input class="txtCode" name="vali_code">
+
+                <img class="imgCode" src="data/user/00_yzm.php" title="看不清，点击换一张">
+
+                <!--<span class="fa "></span>-->
+                </label>
+            </p>
+            <!--按钮-->
+            <p class="sub_btn">
+                <input type="submit" value="注册" class="submit">
+                <input type="reset" value="重置" class="reset">
+            </p>
+        </form>
+    </div>
+    <div id="footer"></div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/messages_zh.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/header.js"></script>
+<script src="js/register.js"></script>>
+<script src="js/commonFunctions.js"></script>
+</body>
+</html>

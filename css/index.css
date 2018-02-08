@@ -1,0 +1,402 @@
+/*banner部分*/
+#banner{
+    width:1000px;
+    height:500px;
+    overflow:hidden;
+    position:relative;
+    border-radius: 25px ;
+
+}
+#banner ul.banner-img{
+    position:absolute; left:0;
+    /*display: none;*/
+
+}
+#banner ul.banner-img>li{float:left;width:1000px;   }
+#banner ul.banner-img img{
+    width:1000px;
+    height:500px;
+}
+#banner a.ck-slide{
+    position:absolute;
+    top:225px;
+    width:28px;
+    height:50px;
+    border-radius:4px;
+    background: #A51C21;
+    opacity:0.7;
+    transition:all .3s linear;
+}
+#banner a.ck-left{
+    left:5px;
+    background: #A51C21 url(../images/index/arrow-left.png) no-repeat center center;
+}
+#banner a.ck-right{
+    right:5px;
+    background:#A51C21 url(../images/index/arrow-right.png) no-repeat center center;
+}
+#banner a.ck-slide:hover{
+    opacity:1;
+}
+#banner ul.indicators{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    margin-left:-34px;
+}
+#banner ul.indicators li{
+    width:12px;
+    height:12px;
+    background:#fff;
+    border-radius:50%;
+    float:left;
+    margin-right:5px;
+    transition:all .2s linear;
+}
+#banner ul.indicators li:hover,#banner ul.indicators li.hover{
+    cursor:pointer;
+    background-color:#A51C21;
+}
+/*图片上浮的logo和文字*/
+#banner .logo{
+    width: 1000px;
+    height: 500px;
+    overflow:hidden;
+    position:absolute;
+    z-index:10;
+    top:250px;
+    text-align: center;
+    color:#000;
+    text-shadow:0 0 5px #aaa;
+    background:url(../images/index/menu-bg.jpg) ;
+    box-sizing: border-box;
+    transition:height 0.5s linear;
+    transform:translateY(-50%);
+}
+#banner .logo #logo_cir{
+    position:absolute;
+    top:20px;
+    left:425px;
+    z-index: 100;
+}
+#banner>.logo img{
+    margin:40px auto;
+    width: 100px;
+    /*border-radius: 25px ;*/
+}
+#banner>.logo h1{
+    font-size:55px;
+    margin:40px auto;
+
+}
+#banner>.logo h3{
+    font-size:25px;
+}
+/*欢迎*/
+div.wel_sb{
+    margin:20px 50px ;
+    width: 900px;
+    height: 350px;
+    color:#fff;
+    background: url("../images/index/about.jpg") no-repeat left;
+    background-size:450px 350px;
+    background-color:#141213;
+    box-sizing: border-box;
+    text-align: left;
+    /*position:relative;*/
+}
+
+div.wel_sb div.wel_msg {
+    margin-left:450px;
+    padding: 40px 50px 50px;
+    line-height: 2;
+}
+div.wel_sb div.wel_msg h3{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+div.wel_sb div.wel_msg button:last-child{
+    margin-top:20px;
+    width: 100px;
+    height: 40px;
+    border:2px solid #fff;
+    background: #000;
+    color:#fff;
+    font-size: 15px;
+    border-radius:5px;
+    transition:all 0.3s linear;
+
+}
+/*点击查看更多，出现的窗口*/
+ div.img_fixed{
+    width: 540px;
+    height: 540px;
+    /*display:none;*/
+    text-align: center;
+    border: 3px solid #fff;
+    border-radius:10px;
+    background:#000;
+    transition:all 0.3s linear;
+     position:fixed;
+     top:-550px;
+     left:50%;
+     z-index:20;
+     margin-left:-270px;
+}
+ div.img_fixed button{
+    font-weight: bold;
+    background-color:#fff;
+    float:right;
+    margin-top:5px;
+    margin-right:5px;
+    border-radius: 3px;
+
+
+}
+div.img_fixed img:nth-child(2){
+    margin-top: 10px ;
+    width: 50px;
+    height: 50px;
+}
+
+ div.img_fixed h1{
+    font-size:20px;
+    margin:30px auto;
+}
+div.img_fixed img:nth-child(4){
+    width: 500px;
+    height: 260px;
+}
+ div.img_fixed h3{
+    padding-top :20px ;
+    font-size:25px;
+}
+div.img_fixed p{
+    padding :10px ;
+   line-height:2;
+}
+/*点击查看更多，后面页面变暗*/
+div.wel_sb>.black_overlay{
+    display:none;
+    position:fixed;
+    top:0%;left:0%;
+    width:100%;height:100%;
+    background-color:#000;
+    z-index:19;
+    opacity:.5;
+}
+/*热门推荐*/
+#hot-dishes{
+    padding-top:10px;
+    background:url(../images/index/rmcpbj.jpg) no-repeat;
+    background-size:100%;
+    width: 1000px;
+    height:430px;
+    box-sizing: border-box;
+}
+#hot-dishes>img{
+    /*margin-bottom:10px;*/
+}
+#hot-dishes>div.hot-nav{
+    display:flex;
+    position: relative;
+    justify-content: space-between;
+}
+#hot-dishes div.dish{
+    display:flex;
+    color:#6B6868;
+    width: 500px;
+    justify-content: space-between;
+    position: absolute;
+    box-sizing: border-box;
+    transition: all 1.3s linear;
+    background: #fff;
+    padding:15px 5px;
+}
+#hot-dishes div.dish:last-child{
+    right:-1000px;
+
+
+}
+#hot-dishes div.dish:first-child{
+    left:-1000px;
+
+}
+#hot-dishes div.dish>div:first-child>img{
+    transition: all 1s linear;
+    width: 280px;
+    height:300px;
+}
+#hot-dishes div.dish>div:first-child {
+    width: 280px;
+    height: 300px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+#hot-dishes div.dish>div:first-child>img:hover{
+     transform: scale(1.3);
+}
+#hot-dishes div.dish>div:last-child{
+   line-height: 2;
+    padding:0px 10px;
+    width: 220px;
+}
+#hot-dishes div.dish>div:last-child img{
+    width: 60px;
+    height: 60px;
+}
+#hot-dishes div.dish>div:last-child>p{
+    padding-top:15px;
+}
+/*楼层按钮*/
+.lift{
+    margin-top: 25px;
+    display: none;
+    position: fixed;
+    z-index: 100;
+    background-color: #918888;
+    left: 10px;
+    top:100px;
+    border-radius: 6px;
+}
+.lift .lift_list{ display: block; list-style:none }
+.lift .lift_item {
+    border-top: 1px solid #b1aaaa;
+    transition: background-color .1s;
+    transition:all .3s linear;
+    border-radius: 6px;
+}
+.lift .lift_btn {
+    overflow: hidden;
+    display: block;
+    width: 35px;
+    padding: 10px 5px;
+    line-height: 14px;
+    text-align: center;
+    color: #fefefe;
+    transition: color .1s;
+}
+.lift .lift_item:hover, .lift_item.hover {
+    position: relative;
+    background-color:  #A51C21;
+}
+.lift_btn {
+    overflow: hidden;
+    display: block;
+    width: 34px;
+    padding: 10px 5px;
+    line-height: 14px;
+    text-align: center;
+    color: #fefefe;
+    border-radius: 3px;
+    transition: color .1s;
+}
+/*加入我们*/
+div.join_us{
+    margin: 20px auto;
+    width:1000px;
+    height:420px;
+    position:relative;
+}
+div.join_us>.js_content{
+    display:flex;
+    justify-content: space-around;
+    z-index:10;
+}
+div.join_us>.js_content .js_btn{
+    display: inline-block;
+    margin-top:15px;
+    border:2px solid #28564A;
+    padding:8px 60px;
+    border-radius: 22px;
+    font-size: 15px;
+}
+div.join_us>.js_content .js_btn:hover{
+    color:#fff;
+    background-color:#28564A;
+}
+div.join_us>.js_content p{
+    text-align:start;
+    line-height: 1.8;
+    font-size: 13px;
+}
+img.totop{
+    position:fixed;
+    right: 100px;
+    bottom:80px;
+    display:none;
+}
+div.join_us>div.contact{
+    background: #eee;
+    padding:20px 0;
+    width:0px;
+    height:420px;
+    position: absolute;
+    top:0px;
+    left:500px;
+    box-sizing: border-box;
+    overflow:hidden;
+    transition:all 0.3s linear;
+
+}
+div.join_us>div.contact>.contact_main{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:1000px;
+    height:400px;
+    opacity: 0;
+    color:#333;
+}
+div.join_us>div.contact>.contact_main button{
+    padding:10px 40px;
+    border:2px solid #28564A;
+    border-radius: 10px;
+    z-index: 2;
+    font-size: 15px;
+
+}
+div.join_us>div.contact>.contact_main button:hover{
+    background-color:#28564A ;
+    color:#fff;
+    font-weight: bold;
+}
+div.join_us>.contact p{
+    font-size: 18px;
+    color:#A51C21;
+}
+#can_circle{
+    position: absolute;
+    top:0;
+    left:0;
+    width:1000px;
+    height:420px;
+
+}
+.contact_main .contact-information{
+    display: flex;
+    flex-direction:column ;
+    align-items: flex-start;
+    justify-content: space-between;
+    /*line-height: 1.8;*/
+    height:330px;
+    box-sizing: border-box;
+}
+.contact_main table.position{
+    font: 14px  微软雅黑 ;
+  border-collapse: collapse;
+    line-height:30px;
+
+}
+.contact_main table.position caption{
+    font-size:22px;
+    font-weight: bold;
+}
+.contact_main table.position td{
+    border:1px solid #ddd;
+    line-height: 1.7;
+}
+
+
+

@@ -1,0 +1,48 @@
+div.c-top>img:first-child{
+    width:100%
+}
+div.c-middle>p{
+    margin-top: 20px;
+    font-size: 35px;
+}
+div.c-middle>p>span{
+    display: block;
+    font-size: 14px;
+    margin-top: -2px;
+}
+div.c-middle>ul{
+    display: flex;
+    justify-content: center;
+    margin:10px auto;
+}
+div.c-middle>ul>li{
+    text-align:center;
+    padding:30px 60px;
+    border:1px solid #ddd;
+
+}
+div.c-middle>ul>li>a{
+    font-size: 25px;
+    color:#333;
+}
+div.c-middle>ul>li>a>span{
+    text-align:center;
+    font-size: 14px;
+}
+#map{
+    width:1000px;
+    height:500px;
+    border:#ccc solid 1px;
+    font-size:12px
+}
+#map label{
+    border:1px solid #333;
+}
+
+div.c-middle p.expect{
+    display:none;
+
+}
+div.c-middle{
+    margin-bottom: 20px;
+}
