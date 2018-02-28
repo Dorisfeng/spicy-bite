@@ -34,8 +34,8 @@
         <div class="adress_choice">
             <label>请选择就餐地址：</label>
             <datalist id="myList">
-                <option>东方广场店-北京东城区东长安街1号</option>
-                <option>天津大悦城店-天津市南开区南门外大街2号</option>
+                <option value='东方广场店' >北京东城区东长安街1号</option>
+                <option value='天津大悦城店'>天津市南开区南门外大街2号</option>
             </datalist>
             <input type="text"  list="myList" class="user_address" placeholder="请输入店名或地址查询">
         </div>
@@ -62,7 +62,7 @@
                     <li class="p_count">数量</li>
                     <li class="p_tPrice">金额</li>
                 </ul>
-                <div id="product_list">
+                <div class="product_list">
 
 
 
@@ -72,7 +72,7 @@
         <!-- 结算条-->
         <div id="count_bar">
             <span class="go_cart"><a href="shopping_cart.html">&lt;&lt;返回购物车</a></span>
-            <span class="count_bar_info">已选<b id="count">0</b>件商品&nbsp;&nbsp;合计(不含运费):<b class="zj">0.00</b> <input type="hidden" name="Payment" value="">元</span>
+            <span class="count_bar_info">已选<b class="pcount">0</b>件商品&nbsp;&nbsp;合计(不含运费):<b class="zj">0.00</b> <input type="hidden" name="Payment" value="">元</span>
             <button class="go_pay">确认并付款</button> 
         </div>
     </div>

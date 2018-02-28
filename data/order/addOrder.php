@@ -8,7 +8,7 @@ $pNum=$_REQUEST['pNum'];
 $con_name=$_REQUEST['con_name'];
 $phone=$_REQUEST['phone'];
 if($user_id&&$pNum&&$timer&&$con_name&&$phone){
- $sql="insert into sb_order values(null,'$user_id','$pNum','$timer','$con_name','$phone')";
+ $sql="insert into sb_order values(null,'$user_id','$pNum','$timer','$con_name','$phone','',0,'','')";
 $result=mysqli_query($conn,$sql);
 $oid=mysqli_insert_id($conn);
 echo $oid;

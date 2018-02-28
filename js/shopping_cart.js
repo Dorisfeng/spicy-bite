@@ -174,7 +174,7 @@ $('.toOrder').click((e)=>{
                    for(var i in data){
             //将已选的菜单信息添加到订单详情
                     var did=data[i].did,count=data[i].num,sid=data[i].sid;
-                   // console.log('did'+did+',count'+count+',oid'+oid)
+                  console.log('did'+did+',count'+count+',oid'+oid)
                     $.post('data/order/addOrderDetail.php',`order_id=${oid}&did=${did}&count=${count}`).then();
                        //加入订单的同时删除购物车
                     //   console.log('sid:'+sid);

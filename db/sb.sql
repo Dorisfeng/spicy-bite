@@ -277,10 +277,14 @@ CREATE TABLE sb_order(
   timer varchar(128) NOT NULL DEFAULT '',
   con_name  varchar(64) NOT NULL DEFAULT '',
   phone  varchar(32) NOT NULL DEFAULT '' ,
+  address_id varchar(255)  NOT NULL DEFAULT '',
+  status  int(11)  NOT NULL DEFAULT 0,#-1-无效订单，0-已提交，1-已确认，2-已支付
+order_time varchar(128) NOT NULL DEFAULT '',
+  pay_time varchar(128) NOT NULL DEFAULT '',
    FOREIGN KEY(user_id ) REFERENCES sb_user(uid)
 # FOREIGN KEY(shop_id) REFERENCES sb_shoppingCart(sid)
 );
-insert into sb_order values(1,1,1,111111,111,11111);
+insert into sb_order values(1,1,1,111111,111,11111,'',0,'','');
 
 #订单信息
 CREATE TABLE sb_order_detail(

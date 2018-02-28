@@ -40,20 +40,44 @@ $.get("data/order/getOrder.php",`oid=${oid}`)
 $.get("data/order/getOrderDetail.php",`oid=${oid}`).then(data=>{
     console.log(data);
     var html='';
-    html+=`
-    <ul class="item_content">
+    var total=0,count=0;
+    for(var item of data){
+         html+=`<ul class="item_content">
                     <li class="p_info"> 
-                    <b><img src=""></b>
-
-                <b class="product_name ">
-                
-                </b>
+                   <img src="${item.img}">
+                <b class="product_name ">${item.dish_name}</b>
                 </li>
-                    <li class="p_price">单价(元)</li>
-                    <li class="p_count">数量</li>
-                    <li class="p_tPrice">金额</li>
+                    <li class="p_price">${item.price}(元)</li>
+                    <li class="p_count">${item.count}</li>
+                    <li class="p_tPrice">${parseFloat(item.count)*parseFloat(item.price)}</li>
                 </ul>`;
-})
+
+            total+=parseFloat(item.count)*parseFloat(item.price);
+            count+=parseFloat(item.count);
+    }
+    $('.pcount').html(count);
+            $('.zj').html(total);
+            $('.product_list').html(html);
+   
+}) 
+            
+   $('.go_pay').click((e)=>{
+    var address=$('.user_address').val();
+    var total=$('.zj').html();
+   var time=new Date().toUTCString();
+   console.log(time);
+        if(address){
+             console.log(oid,address);
+            $.post("data/order/updateOrder.php",`oid=${oid}&status=1&address=${address}&time=${time}`).then(
+               location.href=`payment.html?total=${total}&oid=${oid}`
+                )
+        }else{
+            alert('请选择用餐地址');
+        }
+   
+    })      
+   
+  
 
 
 })
